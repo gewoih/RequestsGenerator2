@@ -1,39 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace RequestsGenerator
 {
-	class RequestTemplate
+	public class RequestTemplate
 	{
-		public int id { get; set; }
-		public int fsrar_id { get; set; }
-		public int command_id { get; set; }
-		public string name { get; set; }
-		public string xmlText { get; set; }
-		private List<Request> Requests;
+		public List<Template> Items = new List<Template>();
 
-		public RequestTemplate(int id, int fsrar_id, int command_id, string name, string xmlText)
+		public void AddItem(SqlDataReader reader)
 		{
-			this.id = id;
-			this.fsrar_id = fsrar_id;
-			this.command_id = command_id;
-			this.name = name;
-			this.xmlText = xmlText;
-			Requests = new List<Request>();
+			this.Items.Add(new Template(Convert.ToInt32(reader["id"]),
+										reader["fsrar_id"].ToString(),
+										Convert.ToInt32(reader["command_id"]),
+										reader["request_name"].ToString(),
+										reader["xml_text"].ToString()));
 		}
 
-		public void AddRequest(Request newRequest)
+		public void LoadItems()
 		{
-			Requests.Add(newRequest);
-		}
+			this.Items.Clear();
 
-		public void LoadRequests()
-		{
 			SQL connection = new SQL();
-			connection.Execute("select * from Requests where template_id = " + this.id.ToString());
+			SqlDataReader reader = connection.Execute("select * from RequestsGenerator..Templates");
+
+			while (reader.Read())
+			{
+				this.AddItem(reader);
+
+				ListViewItem newListViewItem;
+				newListViewItem = new ListViewItem(new string[] {
+													reader["id"].ToString(),
+													reader["fsrar_id"].ToString(),
+													reader["command_id"].ToString(),
+													reader["request_name"].ToString(),
+													reader["xml_text"].ToString() });
+
+				MainForm.form.TemplatesListViewAddElement(newListViewItem);
+			}
 		}
 	}
 }
