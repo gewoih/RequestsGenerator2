@@ -117,35 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="contextMenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="contextMenuStrip2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>172, 17</value>
-  </metadata>
-  <data name="textEditorControl1.Text" xml:space="preserve">
-    <value>?&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;ns:Documents xmlns:tc="http://fsrar.ru/WEGAIS/Ticket" xmlns:oref="http://fsrar.ru/WEGAIS/ClientRef" xmlns:ns="http://fsrar.ru/WEGAIS/WB_DOC_SINGLE_01" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Version="1.0"&gt;
-  &lt;ns:Owner&gt;
-    &lt;ns:FSRAR_ID&gt;3463047&lt;/ns:FSRAR_ID&gt;
-  &lt;/ns:Owner&gt;
-  &lt;ns:Document&gt;
-    &lt;ns:Ticket&gt;
-      &lt;tc:TicketDate&gt;2021-07-14T12:08:33.145863&lt;/tc:TicketDate&gt;
-      &lt;tc:Identity&gt;388701.120726&lt;/tc:Identity&gt;
-      &lt;tc:DocId&gt;0C564C3A-849A-4512-8004-F1D40E023F63&lt;/tc:DocId&gt;
-      &lt;tc:TransportId&gt;df57ce14-c31a-482e-bf25-919b72ffc9f3&lt;/tc:TransportId&gt;
-      &lt;tc:RegID&gt;TTN-0480666165&lt;/tc:RegID&gt;
-      &lt;tc:DocHash /&gt;
-      &lt;tc:DocType&gt;WayBill_v4&lt;/tc:DocType&gt;
-      &lt;tc:OperationResult&gt;
-        &lt;tc:OperationName&gt;Confirm&lt;/tc:OperationName&gt;
-        &lt;tc:OperationResult&gt;Accepted&lt;/tc:OperationResult&gt;
-        &lt;tc:OperationDate&gt;2021-07-14T12:08:33.143&lt;/tc:OperationDate&gt;
-        &lt;tc:OperationComment&gt;Накладная №575/2 от 14.07.2021 00:00:00 проведена  и выслана грузополучателю как участнику системы (Акт разногласий ожидается от грузополучателя).&lt;/tc:OperationComment&gt;
-      &lt;/tc:OperationResult&gt;
-    &lt;/ns:Ticket&gt;
-  &lt;/ns:Document&gt;
-&lt;/ns:Documents&gt;</value>
-  </data>
 </root>

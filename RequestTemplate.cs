@@ -23,6 +23,9 @@ namespace RequestsGenerator
 
 		public void LoadItems()
 		{
+			MainForm.form.TemplatesListView.Items.Clear();
+			MainForm.form.RequestsListView.Items.Clear();
+			MainForm.form.RepliesListView.Items.Clear();
 			this.Items.Clear();
 
 			SQL connection = new SQL();
@@ -35,12 +38,10 @@ namespace RequestsGenerator
 				ListViewItem newListViewItem;
 				newListViewItem = new ListViewItem(new string[] {
 													reader["id"].ToString(),
-													reader["fsrar_id"].ToString(),
-													reader["command_id"].ToString(),
 													reader["request_name"].ToString(),
-													reader["xml_text"].ToString() });
+													reader["fsrar_id"].ToString() });
 
-				MainForm.form.TemplatesListViewAddElement(newListViewItem);
+				MainForm.form.TemplatesListView.Items.Add(newListViewItem);
 			}
 		}
 	}

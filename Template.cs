@@ -52,11 +52,10 @@ namespace RequestsGenerator
 				newListViewItem = new ListViewItem(new string[] { 
 													reader["id"].ToString(), 
 													reader["template_id"].ToString(),
-													reader["query_id"].ToString(),
 													reader["date"].ToString(),
 													reader["comment"].ToString(),
 													reader["status"].ToString() });
-				MainForm.form.RequestsListViewAddElement(newListViewItem);
+				MainForm.form.RequestsListView.Items.Add(newListViewItem);
 			}
 		}
 
@@ -65,10 +64,10 @@ namespace RequestsGenerator
 			SQL connection = new SQL();
 
 			connection.Execute("insert into RequestsGenerator..Templates values(" +
-			this.name + "," +
-			this.fsrarId + "," +
+			"'" + this.name + "'," +
+			"'" + this.fsrarId + "'," +
 			this.commandId.ToString() + "," +
-			this.xmlText + ")");
+			"'" + this.xmlText + "')");
 		}
 
 		public void DeleteFromBase()

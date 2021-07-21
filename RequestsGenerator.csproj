@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ICSharpCode.TextEditor, Version=3.2.1.6466, Culture=neutral, PublicKeyToken=4d61825e8dd49f1a, processorArchitecture=MSIL">
+      <HintPath>packages\ICSharpCode.TextEditor.3.2.1.6466\lib\Net20\ICSharpCode.TextEditor.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormCreateRequest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateRequest.Designer.cs">
+      <DependentUpon>FormCreateRequest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormCreateTemplate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCreateTemplate.Designer.cs">
+      <DependentUpon>FormCreateTemplate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormXMLEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormXMLEditor.Designer.cs">
+      <DependentUpon>FormXMLEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,10 +75,20 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reply.cs" />
     <Compile Include="Request.cs" />
     <Compile Include="RequestTemplate.cs" />
     <Compile Include="SQL.cs" />
     <Compile Include="Template.cs" />
+    <EmbeddedResource Include="FormCreateRequest.resx">
+      <DependentUpon>FormCreateRequest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCreateTemplate.resx">
+      <DependentUpon>FormCreateTemplate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormXMLEditor.resx">
+      <DependentUpon>FormXMLEditor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -70,6 +101,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
