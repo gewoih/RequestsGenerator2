@@ -43,7 +43,7 @@ namespace RequestsGenerator
 			this.tableLayoutPanel1.Controls.Add(this.textEditorControl1, 0, 0);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 2;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 88F));
@@ -55,13 +55,13 @@ namespace RequestsGenerator
 			// 
 			this.btSave.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.btSave.Location = new System.Drawing.Point(4, 411);
-			this.btSave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btSave.Margin = new System.Windows.Forms.Padding(4);
 			this.btSave.Name = "btSave";
 			this.btSave.Size = new System.Drawing.Size(622, 48);
 			this.btSave.TabIndex = 0;
 			this.btSave.Text = "Сохранить изменения";
 			this.btSave.UseVisualStyleBackColor = true;
-			this.btSave.Click += new System.EventHandler(this.button1_Click);
+			this.btSave.Click += new System.EventHandler(this.btSave_Click);
 			// 
 			// textEditorControl1
 			// 
@@ -79,7 +79,7 @@ namespace RequestsGenerator
 			this.ClientSize = new System.Drawing.Size(630, 463);
 			this.Controls.Add(this.tableLayoutPanel1);
 			this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-			this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.Margin = new System.Windows.Forms.Padding(4);
 			this.Name = "FormXMLEditor";
 			this.Text = "Редактирование запроса";
 			this.tableLayoutPanel1.ResumeLayout(false);

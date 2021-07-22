@@ -40,8 +40,8 @@ namespace RequestsGenerator
 			this.cbFsrarId = new System.Windows.Forms.ComboBox();
 			this.btBrowseXML = new System.Windows.Forms.Button();
 			this.btSaveTemplate = new System.Windows.Forms.Button();
-			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.lbBrowseStatus = new System.Windows.Forms.Label();
+			this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
 			this.tableLayoutPanel1.SuspendLayout();
 			this.tableLayoutPanel2.SuspendLayout();
 			this.SuspendLayout();
@@ -95,7 +95,7 @@ namespace RequestsGenerator
 			this.cbTypes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
 			this.cbTypes.DropDownWidth = 500;
 			this.cbTypes.FormattingEnabled = true;
-			this.cbTypes.Location = new System.Drawing.Point(136, 118);
+			this.cbTypes.Location = new System.Drawing.Point(136, 119);
 			this.cbTypes.Name = "cbTypes";
 			this.cbTypes.Size = new System.Drawing.Size(181, 24);
 			this.cbTypes.TabIndex = 6;
@@ -156,7 +156,7 @@ namespace RequestsGenerator
 			this.cbFsrarId.Items.AddRange(new object[] {
             "010060693049",
             "020000559704"});
-			this.cbFsrarId.Location = new System.Drawing.Point(136, 66);
+			this.cbFsrarId.Location = new System.Drawing.Point(136, 67);
 			this.cbFsrarId.Name = "cbFsrarId";
 			this.cbFsrarId.Size = new System.Drawing.Size(180, 24);
 			this.cbFsrarId.TabIndex = 5;
@@ -184,11 +184,6 @@ namespace RequestsGenerator
 			this.btSaveTemplate.UseVisualStyleBackColor = true;
 			this.btSaveTemplate.Click += new System.EventHandler(this.btSave_Click);
 			// 
-			// openFileDialog1
-			// 
-			this.openFileDialog1.DefaultExt = "*.xml";
-			this.openFileDialog1.Filter = "XML файлы|*.xml";
-			// 
 			// lbBrowseStatus
 			// 
 			this.lbBrowseStatus.Anchor = System.Windows.Forms.AnchorStyles.None;
@@ -200,6 +195,11 @@ namespace RequestsGenerator
 			this.lbBrowseStatus.Size = new System.Drawing.Size(176, 17);
 			this.lbBrowseStatus.TabIndex = 2;
 			this.lbBrowseStatus.Text = "Шаблон XML не выбран...";
+			// 
+			// openFileDialog1
+			// 
+			this.openFileDialog1.DefaultExt = "*.xml";
+			this.openFileDialog1.Filter = "XML файлы|*.xml";
 			// 
 			// FormCreateTemplate
 			// 

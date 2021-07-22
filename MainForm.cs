@@ -21,6 +21,9 @@ namespace RequestsGenerator
 			InitializeComponent();
 			form = this;
 
+			textEditorControl1.SetHighlighting("XML");
+			textEditorControl1.IsReadOnly = true;
+
 			Templates = new RequestTemplate();
 			Templates.LoadItems();
 		}
@@ -107,7 +110,14 @@ namespace RequestsGenerator
 
 		private void miSaveRequest_Click(object sender, EventArgs e)
 		{
+			if (this.RequestsListView.SelectedItems.Count > 0)
+				Templates.Items[this.TemplatesListView.SelectedIndices[0]].RequestsHistory[this.RequestsListView.SelectedIndices[0]].SaveToFile();
+		}
 
+		private void TemplatesListView_DrawColumnHeader(object sender, DrawListViewColumnHeaderEventArgs e)
+		{
+			e.Graphics.FillRectangle(Brushes.AliceBlue, e.Bounds);
+			e.DrawText();
 		}
 	}
 }

@@ -76,7 +76,7 @@ namespace RequestsGenerator
 			this.tableLayoutPanel1.Controls.Add(this.tableLayoutPanel2, 1, 0);
 			this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(4);
+			this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
 			this.tableLayoutPanel1.Name = "tableLayoutPanel1";
 			this.tableLayoutPanel1.RowCount = 1;
 			this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
@@ -97,14 +97,15 @@ namespace RequestsGenerator
 			this.TemplatesListView.ForeColor = System.Drawing.SystemColors.WindowText;
 			this.TemplatesListView.FullRowSelect = true;
 			this.TemplatesListView.HideSelection = false;
-			this.TemplatesListView.Location = new System.Drawing.Point(4, 4);
-			this.TemplatesListView.Margin = new System.Windows.Forms.Padding(4);
+			this.TemplatesListView.Location = new System.Drawing.Point(1, 1);
+			this.TemplatesListView.Margin = new System.Windows.Forms.Padding(1);
 			this.TemplatesListView.MultiSelect = false;
 			this.TemplatesListView.Name = "TemplatesListView";
-			this.TemplatesListView.Size = new System.Drawing.Size(381, 653);
+			this.TemplatesListView.Size = new System.Drawing.Size(387, 659);
 			this.TemplatesListView.TabIndex = 0;
 			this.TemplatesListView.UseCompatibleStateImageBehavior = false;
 			this.TemplatesListView.View = System.Windows.Forms.View.Details;
+			this.TemplatesListView.DrawColumnHeader += new System.Windows.Forms.DrawListViewColumnHeaderEventHandler(this.TemplatesListView_DrawColumnHeader);
 			this.TemplatesListView.ItemSelectionChanged += new System.Windows.Forms.ListViewItemSelectionChangedEventHandler(this.TemplatesListView_ItemSelectionChanged);
 			// 
 			// columnHeader1
@@ -157,13 +158,14 @@ namespace RequestsGenerator
 			this.tableLayoutPanel2.Controls.Add(this.RequestsListView, 0, 0);
 			this.tableLayoutPanel2.Controls.Add(this.textEditorControl1, 0, 2);
 			this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-			this.tableLayoutPanel2.Location = new System.Drawing.Point(392, 3);
+			this.tableLayoutPanel2.Location = new System.Drawing.Point(389, 0);
+			this.tableLayoutPanel2.Margin = new System.Windows.Forms.Padding(0);
 			this.tableLayoutPanel2.Name = "tableLayoutPanel2";
 			this.tableLayoutPanel2.RowCount = 3;
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
 			this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 40F));
-			this.tableLayoutPanel2.Size = new System.Drawing.Size(904, 655);
+			this.tableLayoutPanel2.Size = new System.Drawing.Size(910, 661);
 			this.tableLayoutPanel2.TabIndex = 2;
 			// 
 			// RepliesListView
@@ -177,11 +179,11 @@ namespace RequestsGenerator
 			this.RepliesListView.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.RepliesListView.FullRowSelect = true;
 			this.RepliesListView.HideSelection = false;
-			this.RepliesListView.Location = new System.Drawing.Point(4, 266);
-			this.RepliesListView.Margin = new System.Windows.Forms.Padding(4);
+			this.RepliesListView.Location = new System.Drawing.Point(1, 265);
+			this.RepliesListView.Margin = new System.Windows.Forms.Padding(1);
 			this.RepliesListView.MultiSelect = false;
 			this.RepliesListView.Name = "RepliesListView";
-			this.RepliesListView.Size = new System.Drawing.Size(896, 123);
+			this.RepliesListView.Size = new System.Drawing.Size(908, 130);
 			this.RepliesListView.TabIndex = 2;
 			this.RepliesListView.UseCompatibleStateImageBehavior = false;
 			this.RepliesListView.View = System.Windows.Forms.View.Details;
@@ -220,11 +222,11 @@ namespace RequestsGenerator
 			this.RequestsListView.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.RequestsListView.FullRowSelect = true;
 			this.RequestsListView.HideSelection = false;
-			this.RequestsListView.Location = new System.Drawing.Point(4, 4);
-			this.RequestsListView.Margin = new System.Windows.Forms.Padding(4);
+			this.RequestsListView.Location = new System.Drawing.Point(1, 1);
+			this.RequestsListView.Margin = new System.Windows.Forms.Padding(1);
 			this.RequestsListView.MultiSelect = false;
 			this.RequestsListView.Name = "RequestsListView";
-			this.RequestsListView.Size = new System.Drawing.Size(896, 254);
+			this.RequestsListView.Size = new System.Drawing.Size(908, 262);
 			this.RequestsListView.TabIndex = 1;
 			this.RequestsListView.UseCompatibleStateImageBehavior = false;
 			this.RequestsListView.View = System.Windows.Forms.View.Details;
@@ -265,7 +267,7 @@ namespace RequestsGenerator
             this.toolStripMenuItem3,
             this.miDeleteRequest});
 			this.contextMenuStrip2.Name = "contextMenuStrip1";
-			this.contextMenuStrip2.Size = new System.Drawing.Size(216, 126);
+			this.contextMenuStrip2.Size = new System.Drawing.Size(216, 104);
 			// 
 			// miCreateRequest
 			// 
@@ -309,9 +311,10 @@ namespace RequestsGenerator
 			// 
 			this.textEditorControl1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.textEditorControl1.IsReadOnly = false;
-			this.textEditorControl1.Location = new System.Drawing.Point(3, 396);
+			this.textEditorControl1.Location = new System.Drawing.Point(1, 397);
+			this.textEditorControl1.Margin = new System.Windows.Forms.Padding(1);
 			this.textEditorControl1.Name = "textEditorControl1";
-			this.textEditorControl1.Size = new System.Drawing.Size(898, 256);
+			this.textEditorControl1.Size = new System.Drawing.Size(908, 263);
 			this.textEditorControl1.TabIndex = 3;
 			this.textEditorControl1.Text = resources.GetString("textEditorControl1.Text");
 			// 

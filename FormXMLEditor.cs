@@ -15,9 +15,11 @@ namespace RequestsGenerator
 		public FormXMLEditor()
 		{
 			InitializeComponent();
+
+			textEditorControl1.SetHighlighting("XML");
 		}
 
-		private void button1_Click(object sender, EventArgs e)
+		private void btSave_Click(object sender, EventArgs e)
 		{
 			DialogResult = DialogResult.OK;
 		}

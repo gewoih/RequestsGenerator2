@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace RequestsGenerator
 {
@@ -68,6 +71,9 @@ namespace RequestsGenerator
 
 			while (reader.Read())
 			{
+				XDocument document = XDocument.Parse(reader["data"].ToString());
+				var reply = document.Descendants("Comments").First();
+
 				this.AddReply(reader);
 
 				ListViewItem newListViewItem;
@@ -75,7 +81,7 @@ namespace RequestsGenerator
 													reader["id"].ToString(),
 													reader["queryid"].ToString(),
 													reader["received"].ToString(),
-													reader["data"].ToString() });
+													reply.Value });
 				MainForm.form.RepliesListView.Items.Add(newListViewItem);
 			}
 		}
@@ -98,6 +104,21 @@ namespace RequestsGenerator
 					this.queryId.ToString() + ", status = " +
 					"'" + this.status + "' where id = " +
 					this.id.ToString());
+			}
+		}
+
+		public void SaveToFile()
+		{
+			SaveFileDialog saveDialog = new SaveFileDialog();
+
+			saveDialog.FileName = MainForm.Templates.Items[MainForm.form.TemplatesListView.SelectedIndices[0]].name + " " + this.date.Replace(":", "");
+			saveDialog.Filter = "XML документ|*.xml";
+
+			if (saveDialog.ShowDialog() == DialogResult.OK)
+			{
+				System.IO.File.WriteAllText(saveDialog.FileName, this.xmlText);
+
+				MessageBox.Show("Файл успешно сохранен.");
 			}
 		}
 	}
